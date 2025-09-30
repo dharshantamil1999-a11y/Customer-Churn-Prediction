@@ -15,7 +15,6 @@ Data Cleaning & Preprocessing
 Feature Engineering
 Visualizations & Insights
 Goal: Identify patterns and key drivers of churn to help businesses retain customers.
-
 🗂** Dataset Description**
 The dataset consists of 4 Excel sheets:
 
@@ -34,6 +33,8 @@ Use: Service quality impact on churn.
 Churn_Status (Target Variable)
 
 Columns: CustomerID, Churn (1 = Churned, 0 = Retained)
+
+
 **🔍 Exploratory Data Analysis (EDA)**
 Key Steps:
 Univariate Analysis: Distributions of Age, IncomeLevel, etc.
@@ -47,15 +48,18 @@ Age Distribution
 
 Churn rate by IncomeLevel: High-income customers churn less.
 Correlation between SatisfactionScore and churn.
+
 Outlier Detection:
 
 Used IQR to cap extreme TransactionAmount values.
+
+
 🧹 Data Cleaning & Preprocessing
-Steps:
-**Handling Missing Values**:
+Steps:Handling Missing Values:
 
 Dropped rows with missing SatisfactionScore (5% of data).
 Imputed ResolutionTime with median.
+
 **Feature Engineering**:
 
 Created AvgTransactionAmount per customer.
@@ -65,24 +69,27 @@ Encoding & Scaling:
 **One-hot encoded ProductCategory.**
 Scaled numerical features (Age, Amount) using StandardScaler.
 📈 Key Insights
+
 **Demographics:**
 
 Customers aged 30-45 have the highest churn rate.
 Low-income customers are 2x more likely to churn.
+
 **Behavioral**:
 
 Customers with ≥3 service interactions churn 60% more often.
 Unsatisfied customers (score ≤2) churn 75% of the time.
+
 **🛠 Tools Used**
 Python Libraries:
 Python
 
 pandas, numpy, matplotlib, seaborn, scikit-learn
+
 Jupyter Notebook for analysis.
 Git for version control.
 📂 Project Structure
 Bash
-
 .
 ├── data/                   # Raw and processed data
 │   ├── Customer_Churn_Data_Large.xlsx
